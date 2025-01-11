@@ -1,30 +1,43 @@
-#include <bits/stdc++.h>
-using namespace std;
-int main() 
+#include<stdio.h>
+int main()
 {
-    string s;
-    cin>>s;
-    int count=0;
-    for(int i=0;i<s.size();i++)
-    {
-        for(int j=i+1;j<s.size();j++)
-        {
-            if(s[i]==s[j])
-            {
-                count++;
-                break;
-            }
-        }
+    char name[105];
+    int temp[26]={0};
+    scanf("%s", name);
 
+
+    // for (int i=0; i<150; i++){
+
+    //     temp[i] = 0;
+    // }
+
+    int num;
+
+    for (int i=0; name[i] !='\0'; i++){
+            if (name[i]>='a' && name[i]<= 'z'){
+
+
+                    temp[name[i]-'a'] = 1;
+
+
+            }
     }
-    if((s.size()-count)%2==0)
-    {
-        cout<<"CHAT WITH HER!"<<endl;
+
+    int sum = 0;
+    for (int i=0; i < 26; i++){
+
+         sum += temp[i];
     }
-    else
-    {
-        cout<<"IGNORE HIM!"<<endl;
+
+
+    // sum= sum-1;
+
+    // printf("%d\n", sum);
+    if (sum%2!=0){
+        printf("IGNORE HIM!\n");
     }
-    
-    return 0;
+
+    else{
+        printf("CHAT WITH HER!\n");
+    }
 }
