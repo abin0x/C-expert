@@ -25,6 +25,8 @@ int main()
         }   
 
     }
+    
+    // printf("Element not found\n");
     if(index==-1)
     {
         cout<<"Element not found"<<endl;
