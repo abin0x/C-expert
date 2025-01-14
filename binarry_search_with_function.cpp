@@ -28,7 +28,7 @@ int main()
 {
     vector<int> v={1,2,3,4,5};
     int result=binarry(v);
-    if(index==-1)
+    if(v==-1)
     {
         cout<<"Element not found"<<endl;
     }
